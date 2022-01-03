@@ -1,0 +1,27 @@
+.banner-area {
+    background-image: url('../../../images/banner.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 91vh;
+}
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 700px;
+}
+
+.banner-content h1 {
+    font-size: 45px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.banner-content p {
+    font-size: 16px;
+    font-weight: 500;
+}
+.box-button {
+    font-size: 19px;
+}
