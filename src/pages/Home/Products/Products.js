@@ -31,7 +31,7 @@ const Products = () => {
                                         emptySymbol="far fa-star"
                                         fullSymbol="fas fa-star"
                                         readonly
-                                    /> <strong style={{ color: "#000" }}>{product.start}</strong> </p>
+                                    /> <strong style={{ color: "#315160" }}>{product.start}</strong> </p>
                                 </div>
                             </div>
                         )
