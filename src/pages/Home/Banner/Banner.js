@@ -1,6 +1,8 @@
+// Import Necessary file 
 import React from 'react';
 import './Banner.css'
 
+// Banner Functional Component 
 const Banner = () => {
     return (
         <div className='banner-area'>

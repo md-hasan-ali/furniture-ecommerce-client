@@ -1,8 +1,10 @@
+// Import Necessary file 
 import React from 'react';
 import Footer from '../Sheard/Footer/Footer';
 import Navigarion from '../Sheard/Navigation/Navigarion';
 import './Contact.css'
 
+// create Contact Functional component 
 const Contact = () => {
     return (
         <>

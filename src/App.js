@@ -1,3 +1,4 @@
+// Import Necessary file 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home/Home/Home';
@@ -10,6 +11,7 @@ import {
 import Contact from './pages/Contact/Contact';
 import AllProduct from './pages/AllProducts/AllProduct';
 
+// App functional Component 
 function App() {
   return (
     <>
