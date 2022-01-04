@@ -1,0 +1,65 @@
+[
+    {
+        "key": "f1f4f2f1",
+        "name": "Furniture 1",
+        "price": "$1250",
+        "desc": "In its original form, the iMac G3 had a gumdrop or egg-shaped look, with a CRT monitor, mainly enclosed by a colored, translucent plastic case, which was refreshed early on with a sleeker design notable for its slot-loaded optical drive.",
+        "img": "https://i.ibb.co/HCMZbMk/Blank-Screen-Computer-On-Table-With-Office-In-The-Background.jpg"
+    },
+    {
+        "key": "f1f4f2f3",
+        "name": "Furniture 2",
+        "price": "$930",
+        "desc": "The MacBook is a brand of Macintosh notebook computers designed and marketed by Apple Inc. that use Apple's macOS operating system since 2006. It replaced the PowerBook and iBook brands during the Mac to Intel processors, announced in 2005.",
+        "img": "https://i.ibb.co/JQxcJVk/mac-laptop.jpg"
+    },
+    {
+        "key": "f1f4f2f4",
+        "name": "Furniture 3",
+        "price": "$20.25",
+        "desc": "A computer keyboard is a peripheral input device modeled after the typewriter keyboard[1] which uses an arrangement of buttons or keys to act as mechanical levers or electronic switches. Replacing early punched cards and paper tape technology,",
+        "img": "https://i.ibb.co/wgH0zLb/keyboard.jpg"
+    },
+    {
+        "key": "f1f4f2f5",
+        "name": "Furniture 4",
+        "price": "$17.00",
+        "desc": "A computer mouse (plural mice, sometimes mouses)[nb 1] is a hand-held pointing device that detects two-dimensional motion relative to a surface. This motion is typically translated into the motion of a pointer on a display, which allows.",
+        "img": "https://i.ibb.co/1Gbg1fZ/mouse.jpg"
+    },
+    {
+        "key": "f1f4f2f6",
+        "name": "Furniture 5",
+        "price": "$20.00",
+        "desc": "A microphone, colloquially called a mic or mike,[1] is a device a transducer that converts sound into an electrical signal. Microphones are used in many applications such as telephones, hearing aids, public address systems.",
+        "img": "https://i.ibb.co/gWJBMmV/mirrophone.jpg"
+    },
+    {
+        "key": "f1f4f2f7",
+        "name": "Furniture 6",
+        "price": "$15.00",
+        "desc": "LED lamps require an electronic LED driver circuit to operate from mains power lines, and losses from this circuit means that the efficiency of the lamp is lower than the efficiency of the LED chips it uses.",
+        "img": "https://i.ibb.co/2Sxt5p4/digital-light.jpg"
+    },
+    {
+        "key": "f1f4f2f7",
+        "name": "Furniture 7",
+        "price": "$15.00",
+        "desc": "LED lamps require an electronic LED driver circuit to operate from mains power lines, and losses from this circuit means that the efficiency of the lamp is lower than the efficiency of the LED chips it uses.",
+        "img": "https://i.ibb.co/2Sxt5p4/digital-light.jpg"
+    },
+    {
+        "key": "f1f4f2f7",
+        "name": "Furniture 8",
+        "price": "$15.00",
+        "desc": "LED lamps require an electronic LED driver circuit to operate from mains power lines, and losses from this circuit means that the efficiency of the lamp is lower than the efficiency of the LED chips it uses.",
+        "img": "https://i.ibb.co/2Sxt5p4/digital-light.jpg"
+    },
+    {
+        "key": "f1f4f2f7",
+        "name": "Furniture 9",
+        "price": "$15.00",
+        "desc": "LED lamps require an electronic LED driver circuit to operate from mains power lines, and losses from this circuit means that the efficiency of the lamp is lower than the efficiency of the LED chips it uses.",
+        "img": "https://i.ibb.co/2Sxt5p4/digital-light.jpg"
+    }
+]
