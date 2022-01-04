@@ -1,0 +1,13 @@
+.contact-form {
+    padding: 30px;
+    box-shadow: 6px 6px 15px #000;
+}
+
+.contact-form input,textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 13px;
+    border: 1px solid rgb(216, 170, 165);
+    border-radius: 3px;
+    outline: none;
+}

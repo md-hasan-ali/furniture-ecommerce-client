@@ -1,14 +1,20 @@
 import React from 'react';
-
+import Footer from '../Sheard/Footer/Footer';
+import Navigarion from '../Sheard/Navigation/Navigarion';
+import './Contact.css'
 
 const Contact = () => {
     return (
         <>
+            <Navigarion></Navigarion>
 
-            <div className='contact-area'>
+            <div className='contact-area my-5'>
                 <div className="container">
+                    <div className="section-title text-center pb-5">
+                        <h2>Contact Us</h2>
+                    </div>
                     <div className="row">
-                        <div className="col-md-7 mx-auto">
+                        <div className="col-md-8 mx-auto">
                             <div className="contact-form">
                                 <form action="">
                                     <input type="text" placeholder='Frist Name' />
@@ -16,7 +22,7 @@ const Contact = () => {
                                     <input type="email" placeholder='Your Email Address' />
                                     <input type="password" placeholder='Your Password' />
                                     <textarea cols="30" rows="5" placeholder='Your Valueable Message'></textarea>
-                                    <button type="submit">Send Message!</button>
+                                    <button className='btn btn-success box-button' type="submit">Send Message!!</button>
                                 </form>
                             </div>
                         </div>
@@ -24,6 +30,7 @@ const Contact = () => {
                 </div>
             </div>
 
+            <Footer></Footer>
         </>
     );
 };

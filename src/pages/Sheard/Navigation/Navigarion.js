@@ -12,7 +12,7 @@ const Navigarion = () => {
                     <Nav className="se-auto">
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-                        <Nav.Link href="#pricing">All Products</Nav.Link>
+                        <Nav.Link as={Link} to="/allProducts">All Products</Nav.Link>
                         <Nav.Link href="#pricing">Gallery</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
                     </Nav>
