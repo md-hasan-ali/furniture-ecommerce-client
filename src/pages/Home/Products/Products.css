@@ -8,9 +8,19 @@
 }
 .single-product {
     margin-bottom: 35px;
-    transition: .4s;
+    transition: .5s;
+    /* position: relative; */
+    z-index: -1;
 }
 .single-product:hover {
     background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
 }
+/* 
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+} */

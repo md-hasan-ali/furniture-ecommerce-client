@@ -25,13 +25,16 @@ const Products = () => {
                                     <img src={product.img} alt="" />
                                     <h4 className='m-0'>{product.name}</h4>
                                     <strong><p>{product.price}</p></strong>
-                                    <p><Rating
+                                    <p className='rating'><Rating
                                         style={{ color: "#315160", paddingBottom: "10px", }}
                                         initialRating={product.start}
                                         emptySymbol="far fa-star"
                                         fullSymbol="fas fa-star"
                                         readonly
-                                    /> <strong style={{ color: "#315160" }}>{product.start}</strong> </p>
+                                    /> <strong style={{ color: "#315160" }}>({product.start})</strong> </p>
+                                    <div className="overlay pb-3">
+                                        <button className='btn btn-success text-white'>Add To Cart <i class="fas fa-cart-plus"></i></button>
+                                    </div>
                                 </div>
                             </div>
                         )

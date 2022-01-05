@@ -14,8 +14,7 @@ const Footer = () => {
                     </div>
                     <div className="col-md-4">
                         <h2>About Me!!</h2>
-                        <p><strong>Email</strong>: hasanaliringku@gmail.com</p>
-                        <p><strong>Location</strong>: Baliadangi, Thakurgaon, Bangladesh</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati ab libero eum praesentium saepe. Iure quasi omnis sapiente.</p>
                         <button className='btn btn-danger'>About Me!</button>
                     </div>
                     <div className="col-md-4">
