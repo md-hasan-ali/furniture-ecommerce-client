@@ -1,0 +1,39 @@
+.quantity {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border: 1px solid gray;
+    margin-top: 20px;
+    width: 163px;
+    border-radius: 5px;
+}
+
+button.plus {
+    position: absolute;
+    left: 0;
+    /* border: none; */
+    font-size: 29px;
+    font-weight: 700;
+    background: #fff;
+    width: 46px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.quantity h2 {
+    margin-left: 72px;
+}
+
+button.minus {
+    /* margin-left: 35px; */
+    /* border: none; */
+    background: #fff;
+    font-weight: 700;
+    font-size: 29px;
+    /* width: 37px; */
+    position: absolute;
+    left: 115px;
+    width: 46px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}

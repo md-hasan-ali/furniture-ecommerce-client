@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import Rating from 'react-rating';
+import { Link } from 'react-router-dom';
 import './Products.css';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
+
     useEffect(() => {
         fetch('https://still-thicket-39969.herokuapp.com/products')
             .then(res => res.json())
@@ -39,7 +41,10 @@ const Products = () => {
                                                 readonly
                                             /> <strong style={{ color: "#315160" }}>({product.start})</strong> </p>
                                             <div className="overlay pb-3">
-                                                <button className='btn btn-success text-white'>Add To Cart <i class="fas fa-cart-plus"></i></button>
+
+                                                <Link to={`productsDetail/${product?._id}`}>
+                                                    <button className='btn btn-success text-white'>Add To Cart <i class="fas fa-cart-plus"></i></button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
