@@ -20,7 +20,7 @@ const PlaceOrderModal = () => {
         setCount(count - 1);
     }
     useEffect(() => {
-        fetch(`http://localhost:4000/products/${id}`)
+        fetch(`https://still-thicket-39969.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProductDetail(data[0]));
     }, [id]);
