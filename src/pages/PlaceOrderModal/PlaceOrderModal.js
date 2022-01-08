@@ -48,7 +48,7 @@ const PlaceOrderModal = () => {
                                 fullSymbol="fas fa-star"
                                 readonly
                             /> <strong style={{ color: "#315160" }}>({productDetail?.start})</strong> </p>
-                            <p>Product-Description: {productDetail?.desc}</p>
+                            <p><strong style={{ fontSize: '20px' }}>Product-Description:</strong> {productDetail?.desc}</p>
                             <h3 className='text-style'>Price : <del style={{ color: '#000' }}>$1050.00</del> {productDetail?.price}.00</h3>
                             <div className="quantity mb-3">
                                 <h2>{count}</h2>
