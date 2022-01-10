@@ -10,9 +10,9 @@ const Contact = () => {
         <>
             <Navigarion></Navigarion>
 
-            <div className='contact-area my-5'>
+            <div className='contact-area py-5'>
                 <div className="container">
-                    <div className="section-title text-center pb-5">
+                    <div className="section-title text-white text-center pb-4">
                         <h2>Contact Us</h2>
                     </div>
                     <div className="row">

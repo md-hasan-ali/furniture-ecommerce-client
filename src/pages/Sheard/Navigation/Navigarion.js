@@ -19,7 +19,7 @@ const Navigarion = () => {
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
 
                         <Nav.Link className='login' as={Link} to="/login">LogIn</Nav.Link>
-                        <Nav.Link className='logout' as={Link} to="/logout">LogOut</Nav.Link>
+                        <Nav.Link className='logout'>LogOut</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
