@@ -12,6 +12,7 @@ import Contact from './pages/Contact/Contact';
 import AllProduct from './pages/AllProducts/AllProduct';
 import PlaceOrderModal from './pages/PlaceOrderModal/PlaceOrderModal';
 import Login from './pages/Login/Login';
+import Registration from './pages/Registration/Registration';
 
 // App functional Component 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path='productsDetail/:id' element={<PlaceOrderModal />} />
           <Route path='contact' element={<Contact />} />
           <Route path='login' element={<Login />} />
+          <Route path='registration' element={<Registration />} />
         </Routes>
       </BrowserRouter>
 

@@ -1,0 +1,10 @@
+.registration {
+    box-shadow: 3px 3px 10px gray;
+    padding: 40px;
+    margin-top:60px;
+}
+.registration input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+}

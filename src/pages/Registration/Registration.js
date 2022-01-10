@@ -1,52 +1,64 @@
 import React, { useState } from 'react';
 import Navigarion from '../Sheard/Navigation/Navigarion';
-import './login-form.css'
-import loginImage from '../../images/login-image.jpg';
+import loginImage from '../../images/login-image.jpg'
+import './registration.css'
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Registration = () => {
     const [loginData, setLoginData] = useState({});
 
     const handleOnChange = (e) => {
         const field = e.target.name;
         const value = e.target.value;
-        const newLoginData = { ...loginData };
+        const newLoginData = { ...loginData }
         newLoginData[field] = value;
         setLoginData(newLoginData);
     }
     const handleSubmit = (e) => {
-        console.log(loginData);
-
+        if (loginData.password !== loginData.confirm_password) {
+            alert('please put your correct password');
+        }
         e.preventDefault();
     }
     return (
         <div>
             <Navigarion></Navigarion>
 
-            <div className="login-area">
+            <div className="registration-component">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-5">
-                            <div className="login-form">
-                                <h2 className='text-danger mb-4'>Please Login.</h2>
+                            <div className="registration">
+                                <h2 className='text-danger mb-4'>Please Register.</h2>
                                 <form onSubmit={handleSubmit}>
                                     <input
+                                        type="text"
+                                        placeholder='your Name'
+                                        name="name"
+                                        onChange={handleOnChange}
+                                    />
+                                    <input
                                         type="email"
-                                        name='email'
+                                        placeholder='your Email'
+                                        name="email"
                                         onChange={handleOnChange}
                                     />
                                     <input
                                         type="password"
-                                        name='password'
+                                        placeholder='Password'
+                                        name="password"
                                         onChange={handleOnChange}
                                     />
-                                    <button
-                                        className='btn btn-success box-button'
-                                        type='submit'
-                                    >Login
-                                    </button>
+
+                                    <input
+                                        placeholder='confirm_password'
+                                        type="password"
+                                        name="confirm_password"
+                                        onChange={handleOnChange}
+                                    />
+                                    <button type='submit' className='btn btn-success box-button'>Please Register</button>
                                 </form>
-                                <Link to='/registration'>
+                                <Link to='/login'>
                                     <button style={{ border: 'none', background: 'none', marginTop: '10px', fontSize: '20px', color: 'teal' }}>New User ? Please Registration</button>
                                 </Link>
                             </div>
@@ -63,4 +75,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Registration;
