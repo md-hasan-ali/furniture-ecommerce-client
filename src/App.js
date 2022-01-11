@@ -14,7 +14,7 @@ import PlaceOrderModal from './pages/PlaceOrderModal/PlaceOrderModal';
 import Login from './pages/Login/Login';
 import Registration from './pages/Registration/Registration';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
-import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
+// import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 
 // App functional Component 
 function App() {
@@ -26,7 +26,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='about' element={<About />} />
             <Route path='allProducts' element={<AllProduct />} />
-            <Route path='productsDetail/:id' element={<PrivateRoute><PlaceOrderModal /></PrivateRoute>} />
+            <Route path='productsDetail/:id' element={<PlaceOrderModal />} />
             <Route path='contact' element={<Contact />} />
             <Route path='login' element={<Login />} />
             <Route path='registration' element={<Registration />} />
