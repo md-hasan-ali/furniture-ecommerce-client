@@ -60,10 +60,10 @@ const Registration = () => {
                                         name="confirm_password"
                                         onChange={handleOnChange}
                                     />
-                                    <button type='submit' className='btn btn-success box-button'>Please Register</button>
+                                    <button type='submit' className='btn btn-success box-button py-4'>Please Register</button>
                                 </form>
                                 <Link to='/login'>
-                                    <button style={{ border: 'none', background: 'none', marginTop: '10px', fontSize: '20px', color: 'teal' }}>New User ? Please Registration</button>
+                                    <button style={{ border: 'none', background: 'none', marginTop: '10px', fontSize: '20px', color: 'teal' }}>Already Registerd ? Please Plogin</button>
                                 </Link>
                             </div>}
                             {

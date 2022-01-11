@@ -8,7 +8,7 @@ import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { loginUser, loadding, user, error } = useAuth();
+    const { loginUser, loadding, user, error, googleSign } = useAuth();
 
     const handleOnChange = (e) => {
         const field = e.target.name;
@@ -23,11 +23,12 @@ const Login = () => {
         loginUser(loginData?.email, loginData?.password)
         e.preventDefault();
     }
+
     return (
         <div>
             <Navigarion></Navigarion>
 
-            <div className="login-area">
+            <div className="login-area mt-4">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-5">
@@ -68,7 +69,15 @@ const Login = () => {
                                 <Link to='/registration'>
                                     <button style={{ border: 'none', background: 'none', marginTop: '10px', fontSize: '20px', color: 'teal' }}>New User ? Please Registration</button>
                                 </Link>
+                                <br />
+                                ------------ OR ------------
+                                <br />
+                                <button onClick={googleSign} className='btn btn-primary box-button me-2'>Google Signin <i className="fab fa-google"></i></button>
+                                <button className='btn btn-danger box-button'>GitHub Signin <i class="fab fa-github"></i></button>
+
                             </div>}
+
+
                             {
                                 loadding &&
                                 <div className="text-center">
