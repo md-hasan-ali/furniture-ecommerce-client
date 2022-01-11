@@ -8,7 +8,7 @@ import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { loginUser, loadding } = useAuth();
+    const { loginUser, loadding, user, error } = useAuth();
 
     const handleOnChange = (e) => {
         const field = e.target.name;
@@ -31,23 +31,37 @@ const Login = () => {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-5">
+                            {
+                                user?.email &&
+                                <div class="alert alert-primary" role="alert">
+                                    Your Account Login Successfully...!
+                                </div>
+                            }
+                            {
+                                error &&
+                                <div class="alert alert-warning" role="alert">
+                                    {error}!
+                                </div>
+                            }
                             {!loadding && <div className="login-form">
                                 <h2 className='text-danger mb-4'>Please Login.</h2>
                                 <form onSubmit={handleSubmit}>
                                     <input
                                         type="email"
+                                        placeholder='your email'
                                         name='email'
                                         onChange={handleOnChange}
                                     />
                                     <input
                                         type="password"
+                                        placeholder='password'
                                         name='password'
                                         onChange={handleOnChange}
                                     />
                                     <button
                                         className='btn btn-success box-button'
                                         type='submit'
-                                    >Login
+                                    >Please Login
                                     </button>
                                 </form>
 
@@ -61,6 +75,7 @@ const Login = () => {
                                     <Spinner size="xl" animation="border" variant="danger" />
                                 </div>
                             }
+
                         </div>
                         <div className="col-md-7">
                             <div className="login-image">

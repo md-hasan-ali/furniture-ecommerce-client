@@ -15,7 +15,7 @@ const useFirebase = () => {
         setisLoadding(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
+                setError('')
             })
             .catch((error) => {
                 setError(error.message);
@@ -28,7 +28,7 @@ const useFirebase = () => {
         setisLoadding(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                const user = userCredential.user;
+                setError('');
             })
             .catch((error) => {
                 setError(error.message);
@@ -40,7 +40,7 @@ const useFirebase = () => {
         setisLoadding(true);
         signInWithPopup(auth, provider)
             .then((result) => {
-                const user = result.user;
+                setError('')
             }).catch((error) => {
                 setError(error.message);
             })
@@ -63,7 +63,7 @@ const useFirebase = () => {
     const logout = () => {
         setisLoadding(true);
         signOut(auth).then(() => {
-            // Sign-out successful.
+            setError('')
         }).catch((error) => {
             setError(error.message);
         })
