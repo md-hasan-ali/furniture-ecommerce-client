@@ -3,9 +3,11 @@ import Navigarion from '../Sheard/Navigation/Navigarion';
 import './login-form.css'
 import loginImage from '../../images/login-image.jpg';
 import { Link } from 'react-router-dom';
+import useAuth from '../../contexts/AuthProvider/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
+    const { loginUser } = useAuth();
 
     const handleOnChange = (e) => {
         const field = e.target.name;
@@ -17,6 +19,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         console.log(loginData);
 
+        loginUser(loginData?.email, loginData?.password)
         e.preventDefault();
     }
     return (

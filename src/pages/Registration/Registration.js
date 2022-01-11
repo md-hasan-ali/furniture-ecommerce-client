@@ -3,9 +3,11 @@ import Navigarion from '../Sheard/Navigation/Navigarion';
 import loginImage from '../../images/login-image.jpg'
 import './registration.css'
 import { Link } from 'react-router-dom';
+import useAuth from '../../contexts/AuthProvider/useAuth';
 
 const Registration = () => {
     const [loginData, setLoginData] = useState({});
+    const { registerUser } = useAuth();
 
     const handleOnChange = (e) => {
         const field = e.target.name;
@@ -18,6 +20,7 @@ const Registration = () => {
         if (loginData.password !== loginData.confirm_password) {
             alert('please put your correct password');
         }
+        registerUser(loginData.email, loginData.password);
         e.preventDefault();
     }
     return (

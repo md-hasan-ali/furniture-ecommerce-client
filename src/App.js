@@ -13,22 +13,25 @@ import AllProduct from './pages/AllProducts/AllProduct';
 import PlaceOrderModal from './pages/PlaceOrderModal/PlaceOrderModal';
 import Login from './pages/Login/Login';
 import Registration from './pages/Registration/Registration';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
 
 // App functional Component 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='allProducts' element={<AllProduct />} />
-          <Route path='productsDetail/:id' element={<PlaceOrderModal />} />
-          <Route path='contact' element={<Contact />} />
-          <Route path='login' element={<Login />} />
-          <Route path='registration' element={<Registration />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='about' element={<About />} />
+            <Route path='allProducts' element={<AllProduct />} />
+            <Route path='productsDetail/:id' element={<PlaceOrderModal />} />
+            <Route path='contact' element={<Contact />} />
+            <Route path='login' element={<Login />} />
+            <Route path='registration' element={<Registration />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
 
     </>
   );
