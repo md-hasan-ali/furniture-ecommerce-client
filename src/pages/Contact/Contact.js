@@ -12,7 +12,7 @@ const Contact = () => {
 
             <div className='contact-area py-5'>
                 <div className="container">
-                    <div className="section-title text-white text-center pb-4">
+                    <div className="section-title text-white text-center pb-2">
                         <h2>Contact Us</h2>
                     </div>
                     <div className="row">

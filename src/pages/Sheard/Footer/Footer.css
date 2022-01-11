@@ -3,3 +3,13 @@
     color:#fff;
     padding:40px 0;
 }
+.social-icon a i {
+    color: #fff;
+    font-size: 32px;
+}
+
+.social-icon li {
+    display: inline-block;
+    margin-right: 22px;
+    margin-bottom: 15px;
+}
