@@ -6,7 +6,7 @@ firebaseInItializetion();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
-    const [loadding, setisLoadding] = useState('');
+    const [loadding, setisLoadding] = useState(true);
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
 
@@ -19,27 +19,32 @@ const useFirebase = () => {
             })
             .catch((error) => {
                 setError(error.message);
-            });
-        setisLoadding(false);
+            })
+            .finally(() => setisLoadding(false));
+
     }
     // login user
     const loginUser = (email, password) => {
+        setisLoadding(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const user = userCredential.user;
             })
             .catch((error) => {
                 setError(error.message);
-            });
+            })
+            .finally(() => setisLoadding(false));
     }
     // sign in with google 
     const googleSign = () => {
+        setisLoadding(true);
         signInWithPopup(auth, provider)
             .then((result) => {
                 const user = result.user;
             }).catch((error) => {
                 setError(error.message);
-            });
+            })
+            .finally(() => setisLoadding(false));
     }
     // observer user 
     useEffect(() => {
@@ -49,17 +54,20 @@ const useFirebase = () => {
             } else {
                 setUser({});
             }
+            setisLoadding(false);
         });
         return () => unsubscribe;
-    }, [])
+    }, [auth])
 
     // logout system
     const logout = () => {
+        setisLoadding(true);
         signOut(auth).then(() => {
             // Sign-out successful.
         }).catch((error) => {
-            // An error happened.
-        });
+            setError(error.message);
+        })
+            .finally(() => setisLoadding(false));
     }
 
     return {

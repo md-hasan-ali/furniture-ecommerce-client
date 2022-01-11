@@ -4,10 +4,11 @@ import loginImage from '../../images/login-image.jpg'
 import './registration.css'
 import { Link } from 'react-router-dom';
 import useAuth from '../../contexts/AuthProvider/useAuth';
+import { Spinner } from 'react-bootstrap';
 
 const Registration = () => {
     const [loginData, setLoginData] = useState({});
-    const { registerUser } = useAuth();
+    const { registerUser, loadding } = useAuth();
 
     const handleOnChange = (e) => {
         const field = e.target.name;
@@ -31,7 +32,7 @@ const Registration = () => {
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-5">
-                            <div className="registration">
+                            {!loadding && <div className="registration">
                                 <h2 className='text-danger mb-4'>Please Register.</h2>
                                 <form onSubmit={handleSubmit}>
                                     <input
@@ -64,7 +65,13 @@ const Registration = () => {
                                 <Link to='/login'>
                                     <button style={{ border: 'none', background: 'none', marginTop: '10px', fontSize: '20px', color: 'teal' }}>New User ? Please Registration</button>
                                 </Link>
-                            </div>
+                            </div>}
+                            {
+                                loadding &&
+                                <div className="text-center">
+                                    <Spinner size="xl" animation="border" variant="danger" />
+                                </div>
+                            }
                         </div>
                         <div className="col-md-7">
                             <div className="login-image">
