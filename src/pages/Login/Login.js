@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import Navigarion from '../Sheard/Navigation/Navigarion';
 import './login-form.css'
 import loginImage from '../../images/login-image.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../contexts/AuthProvider/useAuth';
 import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     const { loginUser, loadding, user, error, googleSign } = useAuth();
+
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const handleOnChange = (e) => {
         const field = e.target.name;
@@ -20,7 +23,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         console.log(loginData);
 
-        loginUser(loginData?.email, loginData?.password)
+        loginUser(loginData?.email, loginData?.password, navigate, location)
         e.preventDefault();
     }
 

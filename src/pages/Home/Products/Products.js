@@ -30,8 +30,10 @@ const Products = () => {
                                 products.map(product =>
                                     <div key={product._id} className='col-md-4'>
                                         <div className="single-product text-center">
-                                            <img src={product.img} alt="" />
-                                            <h4 className='m-0'>{product.name}</h4>
+                                            <div className="image">
+                                                <img src={product.img} alt="" />
+                                            </div>
+                                            <h4 className='mt-2'>{product.name}</h4>
                                             <strong><p>{product.price}</p></strong>
                                             <p className='rating'><Rating
                                                 style={{ color: "#315160", paddingBottom: "10px", }}

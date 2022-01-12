@@ -1,3 +1,4 @@
+// Import Necessary fiel 
 import React, { useState } from 'react';
 import Navigarion from '../Sheard/Navigation/Navigarion';
 import loginImage from '../../images/login-image.jpg'
@@ -6,6 +7,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../../contexts/AuthProvider/useAuth';
 import { Spinner } from 'react-bootstrap';
 
+// Registration functional component 
 const Registration = () => {
     const [loginData, setLoginData] = useState({});
     const { registerUser, loadding } = useAuth();
@@ -60,7 +62,7 @@ const Registration = () => {
                                         name="confirm_password"
                                         onChange={handleOnChange}
                                     />
-                                    <button type='submit' className='btn btn-success box-button py-4'>Please Register</button>
+                                    <button type='submit' className='btn btn-success box-button'>Please Register</button>
                                 </form>
                                 <Link to='/login'>
                                     <button style={{ border: 'none', background: 'none', marginTop: '10px', fontSize: '20px', color: 'teal' }}>Already Registerd ? Please Plogin</button>
