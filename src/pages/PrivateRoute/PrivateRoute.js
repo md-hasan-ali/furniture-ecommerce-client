@@ -1,10 +1,12 @@
 import React from 'react';
 import { Spinner } from 'react-bootstrap';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import useAuth from '../../contexts/AuthProvider/useAuth';
 
 const PrivateRoute = ({ children }) => {
     const { user, loadding } = useAuth();
+    const location = useLocation();
+
     if (loadding) {
         return (
             <div className="text-center">
@@ -13,7 +15,7 @@ const PrivateRoute = ({ children }) => {
         );
     }
     return (
-        user?.email ? children : <Navigate to='/login' />
+        user?.email ? children : <Navigate to="/login" state={{ from: location }} replace />
     );
 };
 

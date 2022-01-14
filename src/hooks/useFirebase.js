@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import firebaseInItializetion from "../pages/Firebase/initializeFirebase";
-import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signOut, onAuthStateChanged, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, updateProfile } from "firebase/auth";
 firebaseInItializetion();
 
 const useFirebase = () => {
@@ -11,11 +11,22 @@ const useFirebase = () => {
     const auth = getAuth();
 
     // create new register 
-    const registerUser = (email, password) => {
+    const registerUser = (email, password, name, photo, navigate) => {
         setisLoadding(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                setError('')
+                const newUser = { email, displayName: name, photoURL: photo }
+                setUser(newUser);
+                // send to the firebase 
+                updateProfile(auth.currentUser, {
+                    displayName: name,
+                    photoURL: photo,
+                }).then((user) => {
+                    console.log(user?.displayName)
+                }).catch((error) => {
+                });
+
+                navigate('/')
             })
             .catch((error) => {
                 setError(error.message);
@@ -28,6 +39,8 @@ const useFirebase = () => {
         setisLoadding(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
+                const destination = location?.state?.form || '/';
+                navigate(destination);
                 setError('');
             })
             .catch((error) => {
@@ -41,6 +54,7 @@ const useFirebase = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 setError('')
+                console.log(result.user)
             }).catch((error) => {
                 setError(error.message);
             })

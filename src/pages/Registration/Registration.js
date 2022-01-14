@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigarion from '../Sheard/Navigation/Navigarion';
 import loginImage from '../../images/login-image.jpg'
 import './registration.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../contexts/AuthProvider/useAuth';
 import { Spinner } from 'react-bootstrap';
 
@@ -11,8 +11,9 @@ import { Spinner } from 'react-bootstrap';
 const Registration = () => {
     const [loginData, setLoginData] = useState({});
     const { registerUser, loadding } = useAuth();
+    const navigate = useNavigate();
 
-    const handleOnChange = (e) => {
+    const handleOnBlur = (e) => {
         const field = e.target.name;
         const value = e.target.value;
         const newLoginData = { ...loginData }
@@ -23,14 +24,14 @@ const Registration = () => {
         if (loginData.password !== loginData.confirm_password) {
             alert('please put your correct password');
         }
-        registerUser(loginData.email, loginData.password);
+        registerUser(loginData.email, loginData.password, loginData.name, loginData.photoURL, navigate);
         e.preventDefault();
     }
     return (
         <div>
             <Navigarion></Navigarion>
 
-            <div className="registration-component">
+            <div className="registration-component mb-5">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-5">
@@ -41,26 +42,32 @@ const Registration = () => {
                                         type="text"
                                         placeholder='your Name'
                                         name="name"
-                                        onChange={handleOnChange}
+                                        onBlur={handleOnBlur}
                                     />
                                     <input
                                         type="email"
                                         placeholder='your Email'
                                         name="email"
-                                        onChange={handleOnChange}
+                                        onBlur={handleOnBlur}
+                                    />
+                                    <input
+                                        type="url"
+                                        placeholder='photoURL'
+                                        name='photoURL'
+                                        onBlur={handleOnBlur}
                                     />
                                     <input
                                         type="password"
                                         placeholder='Password'
                                         name="password"
-                                        onChange={handleOnChange}
+                                        onBlur={handleOnBlur}
                                     />
 
                                     <input
                                         placeholder='confirm_password'
                                         type="password"
                                         name="confirm_password"
-                                        onChange={handleOnChange}
+                                        onBlur={handleOnBlur}
                                     />
                                     <button type='submit' className='btn btn-success box-button'>Please Register</button>
                                 </form>

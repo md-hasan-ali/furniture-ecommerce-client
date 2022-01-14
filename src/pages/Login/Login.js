@@ -31,7 +31,7 @@ const Login = () => {
         <div>
             <Navigarion></Navigarion>
 
-            <div className="login-area mt-4">
+            <div className="login-area my-5">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-5">
@@ -72,9 +72,8 @@ const Login = () => {
                                 <Link to='/registration'>
                                     <button style={{ border: 'none', background: 'none', marginTop: '10px', fontSize: '20px', color: 'teal' }}>New User ? Please Registration</button>
                                 </Link>
-                                <br />
-                                ------------ OR ------------
-                                <br />
+
+                                <p className='mt-2'> ------------ OR ------------ </p>
                                 <button onClick={googleSign} className='btn btn-primary box-button me-2'>Google Signin <i className="fab fa-google"></i></button>
                                 <button className='btn btn-danger box-button'>GitHub Signin <i class="fab fa-github"></i></button>
 

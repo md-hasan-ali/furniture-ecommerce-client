@@ -21,3 +21,13 @@ a.logout.nav-link {
     margin:0 15px;
     font-weight: 700;
 }
+img.profile-image {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-left: 0px;
+}
+.navbar-expand .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+}
