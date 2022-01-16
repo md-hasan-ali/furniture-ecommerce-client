@@ -18,7 +18,7 @@ const Navigarion = () => {
                         <Nav.Link as={Link} to="/about">About Us</Nav.Link>
                         <Nav.Link as={Link} to="/allProducts">All Products</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
-                        <Nav.Link as={Link} className='dashboard me-2' to="/dashboard"> <i class="fas fa-dumpster"></i> Dashboard</Nav.Link>
+                        <Nav.Link as={Link} className='dashboard me-2' to="/dashboard/manageOrders"> <i class="fas fa-dumpster"></i> Dashboard</Nav.Link>
                         {
                             user?.email ?
                                 <>
