@@ -18,20 +18,18 @@ const Navigarion = () => {
                         <Nav.Link as={Link} to="/about">About Us</Nav.Link>
                         <Nav.Link as={Link} to="/allProducts">All Products</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+                        <Nav.Link as={Link} className='dashboard me-2' to="/dashboard"> <i class="fas fa-dumpster"></i> Dashboard</Nav.Link>
                         {
                             user?.email ?
                                 <>
-                                    <Nav.Link onClick={logout} className='logout'>LogOut</Nav.Link>
+                                    <Nav.Link onClick={logout} className='logout home me-2'><i className="fas fa-sign-out-alt text-white"></i> LogOut</Nav.Link>
                                     <img className='profile-image' src={user?.photoURL} alt="" />
                                     <h4 className='text-white ms-1'>{user?.displayName}</h4>
                                 </> :
 
 
-                                <Nav.Link className='login' as={Link} to="/login">LogIn</Nav.Link>
-
-
+                                <Nav.Link className='login home me-2' as={Link} to="/login"><i class="fas fa-sign-in-alt"></i> LogIn</Nav.Link>
                         }
-
                     </Nav>
                 </Container>
             </Navbar>

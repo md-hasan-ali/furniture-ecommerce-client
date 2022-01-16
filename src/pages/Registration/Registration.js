@@ -23,6 +23,7 @@ const Registration = () => {
     const handleSubmit = (e) => {
         if (loginData.password !== loginData.confirm_password) {
             alert('please put your correct password');
+            return;
         }
         registerUser(loginData.email, loginData.password, loginData.name, loginData.photoURL, navigate);
         e.preventDefault();

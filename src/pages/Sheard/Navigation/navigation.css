@@ -9,18 +9,18 @@
     font-size: 20px;
     font-weight: 600;
 }
-a.login.nav-link {
+/* a.login.nav-link {
     background: #BB2D3B;
-    border-radius: 20px;
+    border-radius: 12px;
     margin: 0 15px;
     font-weight: 700;
 }
 a.logout.nav-link {
     background: #BB2D3B;
-    border-radius: 15px;
+    border-radius: 12px;
     margin:0 15px;
     font-weight: 700;
-}
+} */
 img.profile-image {
     width: 55px;
     height: 55px;
@@ -30,4 +30,7 @@ img.profile-image {
 .navbar-expand .navbar-nav {
     flex-direction: row;
     align-items: center;
+}
+i {
+    font-size: 16px;
 }
