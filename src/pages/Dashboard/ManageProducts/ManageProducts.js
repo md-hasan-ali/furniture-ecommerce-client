@@ -5,13 +5,35 @@ import './manage-product.css'
 
 const ManageProducts = () => {
     const [manageProducts, setManageProduct] = useState([]);
+    const [deleteCount, setDeleteCount] = useState(null);
 
     useEffect(() => {
         fetch('http://localhost:4000/products')
             .then(res => res.json())
             .then(data => setManageProduct(data))
-    }, []);
+    }, [deleteCount]);
 
+    const handleDelete = (id) => {
+        const proceed = window.confirm('Are You sure,You want to delete?');
+        if (proceed) {
+            fetch(`http://localhost:4000/products/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    "content-type": "application/json"
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        setDeleteCount(true);
+                    }
+                    else {
+                        setDeleteCount(false);
+                    }
+                })
+        }
+
+    }
     return (
         <div className='mt-5'>
             <div className="container-fluid">
@@ -42,7 +64,7 @@ const ManageProducts = () => {
                                             /> <strong style={{ color: "#315160" }}>({product.start})</strong> </p>
 
                                             <div className="overlay pb-3">
-                                                <button className='btn btn-danger text-white'>Delete <i class="fas fa-trash-alt"></i></button>
+                                                <button onClick={() => handleDelete(product._id)} className='btn btn-danger text-white'>Delete <i class="fas fa-trash-alt"></i></button>
 
                                             </div>
                                         </div>

@@ -1,8 +1,11 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useNavigate } from 'react-router-dom';
 import './addProduct.css'
 
 const AddProduct = () => {
+    const navigate = useNavigate();
+
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         fetch('http://localhost:4000/addNewProduct', {
@@ -15,12 +18,11 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.insertedId) {
-                    alert('Your data submited Successfully..!')
+                    alert('Your data submited Successfully..!');
+                    navigate('/')
                 }
             })
-
     };
-
     return (
         <div className="container mt-5">
             <div className="section-title text-center">
