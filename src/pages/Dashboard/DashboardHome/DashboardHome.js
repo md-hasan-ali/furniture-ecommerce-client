@@ -42,7 +42,7 @@ const DashboardHome = () => {
                             </div>
                             <div className="d-menu">
                                 <Link to='myOrders'>
-                                    <button> <i class="fas fa-th-list"></i> My Orders</button>
+                                    <button> <i class="fab fa-intercom"></i> My Orders</button>
                                 </Link>
                             </div>
                             <div className="d-menu">

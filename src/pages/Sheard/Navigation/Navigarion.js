@@ -12,7 +12,7 @@ const Navigarion = () => {
         <div>
             <Navbar className='' bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home"><span className='text-style'>Furniture</span> STOR</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/"><span className='text-style'>Furniture</span> STOR</Navbar.Brand>
                     <Nav className="se-auto">
                         <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="/about">About Us</Nav.Link>

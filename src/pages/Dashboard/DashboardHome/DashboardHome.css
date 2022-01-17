@@ -6,7 +6,7 @@
     left: 22%;
     position: fixed;
     width: 100%;
- 
+    z-index: 1;
 }
 .dashboard-menu {
     background: #12223F;
