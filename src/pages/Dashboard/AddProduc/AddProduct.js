@@ -19,7 +19,7 @@ const AddProduct = () => {
             .then(data => {
                 if (data.insertedId) {
                     alert('Your data submited Successfully..!');
-                    navigate('/')
+                    navigate('/allProducts')
                 }
             })
     };

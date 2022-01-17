@@ -10,7 +10,7 @@ const Products = () => {
     useEffect(() => {
         fetch('https://still-thicket-39969.herokuapp.com/products')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => setProducts(data.slice(0, 9)))
     }, [])
     console.log(products)
 
