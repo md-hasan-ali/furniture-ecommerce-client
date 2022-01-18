@@ -5,7 +5,6 @@ import './addProduct.css'
 
 const AddProduct = () => {
     const navigate = useNavigate();
-
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
         fetch('http://localhost:4000/addNewProduct', {

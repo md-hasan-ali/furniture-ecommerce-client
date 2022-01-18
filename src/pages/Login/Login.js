@@ -9,7 +9,6 @@ import { Spinner } from 'react-bootstrap';
 const Login = () => {
     const [loginData, setLoginData] = useState({});
     const { loginUser, loadding, user, error, googleSign } = useAuth();
-
     const navigate = useNavigate();
     const location = useLocation();
 

@@ -6,7 +6,6 @@ import './Products.css';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
-
     useEffect(() => {
         fetch('https://still-thicket-39969.herokuapp.com/products')
             .then(res => res.json())
