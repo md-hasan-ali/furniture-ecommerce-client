@@ -26,7 +26,7 @@ const AddProduct = () => {
     return (
         <div className="container mt-5">
             <div className="section-title text-center">
-                <h2 className='mb-5'>Add New Product</h2>
+                <h2 className='mb-5'>Add New <span className='text-style'>Product</span></h2>
             </div>
             <div className="row">
                 <div className="col-md-8 mx-auto">

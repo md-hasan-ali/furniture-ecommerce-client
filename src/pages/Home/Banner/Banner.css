@@ -1,5 +1,5 @@
 /* Banner Css  */
-.banner-area {
+/* .banner-area {
     background-image: url('../../../images/banner.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -11,8 +11,27 @@
     top: 50%;
     left: 45%;
     width: 700px;
+} */
+.banner-content {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    text-align: left;
 }
-
+.single-banner {
+    background-image: url('../../../images/banner.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.single-banner1 {
+    background-image: url('../../../images/banner10.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .banner-content h1 {
     font-size: 45px;
     font-weight: 700;
@@ -28,4 +47,15 @@
 }
 .text-style {
     color: #BB2D3B;
+}
+.carousel.carousel-slider {
+    height: 100%;
+}
+.carousel-root {
+    height: 100%;
+}
+.carousel .control-dots .dot {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
 }
