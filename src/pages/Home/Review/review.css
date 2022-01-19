@@ -1,0 +1,27 @@
+.single-review img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px dotted #95cd41;
+    padding: 4px;
+    margin-top: -28px;
+}
+.single-review {
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid gray;
+    text-align: center;
+    margin-bottom: 70px;
+    background: #95cd41;
+    color: #fff;
+    transition: .5s;
+    background-color: #122033;
+    border-radius: 5px;
+}
+.single-review:hover {
+    position: relative;
+    top:-5%;
+}
+.single-review p {
+    padding: 0 25px;
+}

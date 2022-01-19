@@ -5,6 +5,7 @@ import useAuth from '../../../contexts/AuthProvider/useAuth';
 
 const AddReview = () => {
     const { user } = useAuth();
+    console.log(user)
     const navigate = useNavigate();
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
@@ -35,7 +36,7 @@ const AddReview = () => {
                             <input defaultValue={user?.displayName} {...register("name")} />
                             <input defaultValue={user?.email} {...register("email")} />
 
-                            <input type='url' placeholder='user image url' {...register("img", { required: true })} />
+                            <input defaultValue={user?.photoURL} {...register("img")} />
 
                             <input type='number' placeholder='Rating Number' {...register("start")} />
 

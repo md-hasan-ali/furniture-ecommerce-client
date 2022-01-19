@@ -44,7 +44,7 @@ const Products = () => {
                                             <div className="overlay pb-3">
 
                                                 <Link to={`productsDetail/${product?._id}`}>
-                                                    <button className='btn btn-success text-white'>Add To Cart <i class="fas fa-cart-plus"></i></button>
+                                                    <button className='btn btn-success text-white'>Product Details <i class="fas fa-angle-double-right"></i></button>
                                                 </Link>
                                             </div>
                                         </div>

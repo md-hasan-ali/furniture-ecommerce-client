@@ -5,6 +5,7 @@ import Navigarion from '../../Sheard/Navigation/Navigarion';
 import Banner from '../Banner/Banner';
 import NewArivel from '../NweArivals/NewArivel';
 import Products from '../Products/Products';
+import Review from '../Review/Review';
 
 // Home Functional Component 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <Products></Products>
             <NewArivel></NewArivel>
+            <Review></Review>
             <Footer></Footer>
         </>
     );
