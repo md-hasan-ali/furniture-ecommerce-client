@@ -36,6 +36,6 @@
     border-radius: 3px;
 }
 
-.singleArrivels:hover .overlay {
+.singleArrivels:hover .overlay1 {
     transform: scale(1);
 }
