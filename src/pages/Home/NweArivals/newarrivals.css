@@ -10,7 +10,7 @@
     margin-bottom: 22px;
 }
 
-.overlay {
+.overlay1 {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@
     transition: .5s;
 }
 
-.overlay button {
+.overlay1 .button1 {
     background: #95cd41;
     border: none;
     color: #fff;

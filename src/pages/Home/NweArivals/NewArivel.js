@@ -19,40 +19,40 @@ const NewArivel = () => {
                     <div className="col-md-8">
                         <div className="singleArrivels">
                             <img src={img} alt="" />
-                            <div className="overlay">
-                                <button>Details</button>
+                            <div className="overlay1">
+                                <button className='button1'>Details</button>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="singleArrivels">
                             <img src={img1} alt="" />
-                            <div className="overlay">
-                                <button>Details</button>
+                            <div className="overlay1">
+                                <button className='button1'>Details</button>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="singleArrivels">
                             <img src={img2} alt="" />
-                            <div className="overlay">
-                                <button>Details</button>
+                            <div className="overlay1">
+                                <button className='button1'>Details</button>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="singleArrivels">
                             <img src={img3} alt="" />
-                            <div className="overlay">
-                                <button>Details</button>
+                            <div className="overlay1">
+                                <button className='button1'>Details</button>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="singleArrivels">
                             <img src={img4} alt="" />
-                            <div className="overlay">
-                                <button>Details</button>
+                            <div className="overlay1">
+                                <button className='button1'>Details</button>
                             </div>
                         </div>
                     </div>
