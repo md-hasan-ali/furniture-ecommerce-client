@@ -17,19 +17,44 @@ const NewArivel = () => {
                 </div>
                 <div className="row">
                     <div className="col-md-8">
-                        <img src={img} alt="" />
+                        <div className="singleArrivels">
+                            <img src={img} alt="" />
+                            <div className="overlay">
+                                <button>Details</button>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-md-4">
-                        <img src={img1} alt="" />
+                        <div className="singleArrivels">
+                            <img src={img1} alt="" />
+                            <div className="overlay">
+                                <button>Details</button>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-md-4">
-                        <img src={img2} alt="" />
+                        <div className="singleArrivels">
+                            <img src={img2} alt="" />
+                            <div className="overlay">
+                                <button>Details</button>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-md-4">
-                        <img src={img3} alt="" />
+                        <div className="singleArrivels">
+                            <img src={img3} alt="" />
+                            <div className="overlay">
+                                <button>Details</button>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-md-4">
-                        <img src={img4} alt="" />
+                        <div className="singleArrivels">
+                            <img src={img4} alt="" />
+                            <div className="overlay">
+                                <button>Details</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

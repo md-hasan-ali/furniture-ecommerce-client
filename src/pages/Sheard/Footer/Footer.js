@@ -1,4 +1,5 @@
 import React from 'react';
+import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Footer.css'
 
@@ -31,7 +32,7 @@ const Footer = () => {
                             <li><Link to="/"><i className="fab fa-twitter-square"></i></Link></li>
                         </div>
 
-                        <button className='btn btn-success'>Contact Me!</button>
+                        <Nav.Link className='btn btn-primary text-white d-inline-block' as={Link} to="/login"><i class="fas fa-sign-in-alt"></i> LogIn</Nav.Link>
                     </div>
                 </div>
             </div>
