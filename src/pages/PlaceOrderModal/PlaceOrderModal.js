@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
 import { useParams } from 'react-router-dom';
+import useAuth from '../../contexts/AuthProvider/useAuth';
 import Footer from '../Sheard/Footer/Footer';
 import Navigarion from '../Sheard/Navigation/Navigarion';
 import './PlaceOrder.css'
 
 const PlaceOrderModal = () => {
     const { id } = useParams();
+    const { user } = useAuth();
     const [productDetail, setProductDetail] = useState();
     const [count, setCount] = useState(1);
+
 
     const handleIncrease = () => {
         setCount(count + 1);
     }
     const handleDecress = () => {
-        if (count <= 0) {
+        if (count <= 1) {
             return;
         }
         setCount(count - 1);
@@ -24,7 +27,27 @@ const PlaceOrderModal = () => {
             .then(res => res.json())
             .then(data => setProductDetail(data[0]));
     }, [id]);
-    console.log(productDetail)
+
+    const handleAddToCart = (productInfo) => {
+        productInfo.unique = productInfo._id;
+        productInfo.status = "pending"
+        productInfo.email = user.email
+        productInfo.quantity = { count }
+        fetch('http://localhost:4000/orders', {
+            method: 'POST',
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(productInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Your order Successfully submited..!')
+                }
+            })
+    }
+
 
     return (
         <>
@@ -49,13 +72,13 @@ const PlaceOrderModal = () => {
                                 readonly
                             /> <strong style={{ color: "#315160" }}>({productDetail?.start})</strong> </p>
                             <p><strong style={{ fontSize: '20px' }}>Product-Description:</strong> {productDetail?.desc}</p>
-                            <h3 className='text-style'>Price : <del style={{ color: '#000' }}>$1050.00</del> {productDetail?.price}.00</h3>
+                            <h3 className='text-style'>Price : $ {productDetail?.price * count}</h3>
                             <div className="quantity mb-3">
                                 <h2>{count}</h2>
                                 <button className='plus' onClick={handleIncrease}>+</button>
                                 <button className='minus' onClick={handleDecress}>-</button>
                             </div>
-                            <button className='btn btn-success box-button'>Add To Cart <i class="fas fa-cart-plus"></i></button>
+                            <button onClick={() => handleAddToCart(productDetail)} className='btn btn-success box-button'>Add To Cart <i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
                 </div>
