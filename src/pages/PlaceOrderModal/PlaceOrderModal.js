@@ -53,14 +53,14 @@ const PlaceOrderModal = () => {
         <>
             <Navigarion></Navigarion>
 
-            <div className="place-order my-5">
+            <div className="place-order">
                 <div className="section-title text-center">
                     <h2 className='mb-5'>Place <span className='text-style'>Order</span></h2>
                 </div>
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6">
-                            <img style={{ height: '375px' }} className='w-100' src={productDetail?.img} alt="" />
+                            <img style={{ height: '445px' }} className='w-100' src={productDetail?.img} alt="" />
                         </div>
                         <div className="col-md-6">
                             <h2>Product-Name: {productDetail?.name}</h2>

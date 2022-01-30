@@ -1,17 +1,10 @@
-/* Banner Css  */
-/* .banner-area {
-    background-image: url('../../../images/banner.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 91vh;
+
+.carousel .thumbs-wrapper {
+    display: none;
 }
-.banner-content {
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    width: 700px;
-} */
+.banner-area {
+    margin-top:66px;
+}
 .banner-content {
     position: absolute;
     left: 50%;

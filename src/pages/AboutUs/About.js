@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Footer from '../Sheard/Footer/Footer';
 import Navigarion from '../Sheard/Navigation/Navigarion';
-import aboutImg from '../../images/hasanali.jpg'
+import aboutImg from '../../images/awesome-furniture.jpg'
 import './About.css'
 
 // About functional Component 
@@ -13,7 +13,7 @@ const About = () => {
         <>
             <Navigarion></Navigarion>
 
-            <Container className='my-5'>
+            <Container className='about-area'>
                 <h2 className='text-center pb-4'>About <span className='text-highlight'>Us</span></h2>
                 <Row className='align-items-center'>
                     <Col xs={12} md={6}>

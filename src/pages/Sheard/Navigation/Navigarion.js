@@ -10,7 +10,7 @@ const Navigarion = () => {
     const { user, logout } = useAuth();
     return (
         <div>
-            <Navbar className='' bg="dark" variant="dark">
+            <Navbar fixed="top" className='' bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/"><span className='text-style'>Furniture</span> STOR</Navbar.Brand>
                     <Nav className="se-auto">

@@ -38,7 +38,6 @@ function App() {
             <Route path='contact' element={<Contact />} />
             <Route path='login' element={<Login />} />
             <Route path='registration' element={<Registration />} />
-
             {/* Nested Route */}
             <Route path='dashboard' element={<PrivateRoute><DashboardHome></DashboardHome></PrivateRoute>}>
               <Route path='manageOrders' element={<ManageOrders></ManageOrders>} />

@@ -9,9 +9,20 @@ const MyOrders = () => {
         fetch(`http://localhost:4000/myOrders/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
-    }, [])
+    }, [user?.email])
     console.log(myOrders);
 
+    const handleDelete = (id) => {
+        // console.log(id)
+        fetch(`http://localhost:4000/myOrders/${user?.email}/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
     return (
         <div className='mt-5'>
             <div className="section-title text-center">

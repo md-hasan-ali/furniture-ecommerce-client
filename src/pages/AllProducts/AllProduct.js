@@ -5,6 +5,7 @@ import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 import Footer from '../Sheard/Footer/Footer';
 import Navigarion from '../Sheard/Navigation/Navigarion';
+import './AllProduct.css'
 
 // All Products Component 
 const AllProduct = () => {
@@ -21,7 +22,7 @@ const AllProduct = () => {
         <>
             <Navigarion></Navigarion>
 
-            <div className='products-area my-5'>
+            <div className='products-area'>
                 <div className="container">
                     <div className="section-title text-center">
                         <h2 className='pb-5'>All <span className='text-style'>Products</span></h2>
@@ -36,7 +37,9 @@ const AllProduct = () => {
                                     products.map(product =>
                                         <div key={product._id} className='col-md-4'>
                                             <div className="single-product text-center">
-                                                <img src={product.img} alt="" />
+                                                <div className="image">
+                                                    <img src={product.img} alt="" />
+                                                </div>
                                                 <h4 className='mt-2'>{product.name}</h4>
                                                 <strong><p>{product.price}</p></strong>
                                                 <p className='rating'><Rating

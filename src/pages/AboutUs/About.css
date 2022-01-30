@@ -1,9 +1,13 @@
-.about-image img{
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+.about-area {
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
+/* .about-image img{
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+} */
 .about-image {
     box-shadow: 4px 4px 15px #f9f;
-    padding: 5px;
+    padding: 10px;
     transition: .5s;
 }
 .about-image:hover {
