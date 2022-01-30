@@ -8,7 +8,7 @@ import { Carousel } from 'react-responsive-carousel';
 const Banner = () => {
     return (
         <div className='banner-area'>
-            <Carousel autoPlay={true} infiniteLoop={true} interval={4000}>
+            <Carousel autoPlay={false} infiniteLoop={true} interval={4000}>
                 <div className="single-banner">
                     <div className="container">
                         <div className="row">
@@ -27,7 +27,7 @@ const Banner = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <div className="banner-content">
+                                <div className="banner-content2">
                                     <h1>Welcome To <br /><span className='text-style'>Furniture</span> Shopping Moll</h1>
                                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga repudiandae ea repellat, neque quaerat inventore dignissimos assumenda ex distinctio, hic accusantium animi, vitae iste magni!</p>
                                     <a href='#newArrivals' className="box-button btn btn-success me-2">New Arrivells</a>

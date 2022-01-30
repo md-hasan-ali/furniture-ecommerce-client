@@ -14,12 +14,14 @@ const About = () => {
             <Navigarion></Navigarion>
 
             <Container className='about-area'>
-                <h2 className='text-center pb-4'>About <span className='text-highlight'>Us</span></h2>
+                <div className="section-title text-center">
+                    <h2 className='pb-4'>About <span className='text-style'>Me</span></h2>
+                </div>
                 <Row className='align-items-center'>
                     <Col xs={12} md={6}>
                         <div className="about-content">
                             <h2><span className='text-highlight'>About</span> Me!!!</h2>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum porro quos atque, excepturi fugit, error sed, rem nihil doloremque laboriosam accusamus reiciendis laudantium eaque qui ut dolores at! Accusamus quam ullam dolor voluptatibus possimus odio, ex ipsam, unde minima et, adipisci ut. Reprehenderit ut quod illo expedita corporis voluptate aperiam.</p>
+                            <p>Furniture.com gathers thousands of quality pieces in one place to make browsing, comparing and coordinating simpler than ever. Our curated collection of sofas, dining tables, bedroom sets, patio furniture, accents and more will connect you with just what you want in a snap. Tired of the endless hunt for the perfect shade or the right size?Tired of the endless hunt for the perfect shade or the right size?</p>
                             <Link to='/contact'>
                                 <button className='btn btn-success box-button'>Contact Me!!</button>
                             </Link>

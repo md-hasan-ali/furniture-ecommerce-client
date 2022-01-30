@@ -33,7 +33,7 @@ const Products = () => {
                                                 <img src={product.img} alt="" />
                                             </div>
                                             <h4 className='mt-2'>{product.name}</h4>
-                                            <strong><p>{product.price}</p></strong>
+                                            <strong><p>${product.price}</p></strong>
                                             <p className='rating'><Rating
                                                 style={{ color: "#315160", paddingBottom: "10px", }}
                                                 initialRating={product.start}
