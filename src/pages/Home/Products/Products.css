@@ -30,7 +30,7 @@
 
 }
 .single-product:hover img{
-    transform: scale(1.2);
+    transform:scale(1.2);
 }
 
 .single-product:hover .image::after {
