@@ -5,30 +5,39 @@ import useAuth from '../../../contexts/AuthProvider/useAuth';
 const MyOrders = () => {
     const { user } = useAuth();
     const [myOrders, setMyOrders] = useState([])
+    const [deleteCount, setDeleteCount] = useState(null);
     useEffect(() => {
-        fetch(`https://still-thicket-39969.herokuapp.com/myOrders/${user?.email}`)
+        fetch(`http://localhost:4000/myOrders/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
-    }, [user?.email])
-    console.log(myOrders);
+    }, [deleteCount, user?.email])
 
     const handleDelete = (id) => {
-        // console.log(id)
-        fetch(`https://still-thicket-39969.herokuapp.com/myOrders/${user?.email}/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json'
-            }
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
+        const proceed = window.confirm('Are You sure,You want to delete?');
+        if (proceed) {
+            fetch(`http://localhost:4000/myOrders/${user?.email}/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deleteCount) {
+                        setDeleteCount(true);
+                    } else {
+                        setDeleteCount(false);
+                    }
+                })
+        }
+
     }
     return (
         <div className='mt-5'>
             <div className="section-title text-center">
                 <h2 className='mb-4'>My <span className='text-style'>Orders</span> </h2>
             </div>
-            <Table striped bordered hover variant="dark">
+            <Table responsive striped bordered hover variant="dark">
                 <thead>
                     <tr>
                         <th>#</th>

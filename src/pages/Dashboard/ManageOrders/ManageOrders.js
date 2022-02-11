@@ -5,7 +5,7 @@ const ManageOrders = () => {
     const [manageOrders, setManageOrders] = useState([]);
     const [deleteCount, setDeletedCount] = useState(null)
     useEffect(() => {
-        fetch('https://still-thicket-39969.herokuapp.com/orders')
+        fetch('http://localhost:4000/orders')
             .then(res => res.json())
             .then(data => setManageOrders(data))
     }, [deleteCount])
@@ -14,7 +14,7 @@ const ManageOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You sure,You want to delete?');
         if (proceed) {
-            fetch(`https://still-thicket-39969.herokuapp.com/singleOrder/${id}`, {
+            fetch(`http://localhost:4000/orders/${id}`, {
                 method: 'DELETE',
                 headers: {
                     "content-type": "application/json"
@@ -35,7 +35,7 @@ const ManageOrders = () => {
             <div className="section-title text-center">
                 <h2 className='mb-5'>Manage All <span className='text-style'>Orders</span></h2>
             </div>
-            <Table striped bordered hover variant="dark">
+            <Table responsive striped bordered hover variant="dark">
                 <thead>
                     <tr>
                         <th>#</th>
