@@ -7,7 +7,7 @@ const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([])
     const [deleteCount, setDeleteCount] = useState(null);
     useEffect(() => {
-        fetch(`http://localhost:4000/myOrders/${user?.email}`)
+        fetch(`https://still-thicket-39969.herokuapp.com/myOrders/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [deleteCount, user?.email])
@@ -15,7 +15,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You sure,You want to delete?');
         if (proceed) {
-            fetch(`http://localhost:4000/myOrders/${user?.email}/${id}`, {
+            fetch(`https://still-thicket-39969.herokuapp.com/myOrders/${user?.email}/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'
