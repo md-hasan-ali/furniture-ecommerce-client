@@ -11,8 +11,6 @@ const Products = () => {
             .then(res => res.json())
             .then(data => setProducts(data.slice(0, 9)))
     }, [])
-    console.log(products)
-
     return (
         <div className='products-area my-5'>
             <div className="container">

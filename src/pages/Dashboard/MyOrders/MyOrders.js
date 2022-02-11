@@ -6,7 +6,7 @@ const MyOrders = () => {
     const { user } = useAuth();
     const [myOrders, setMyOrders] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:4000/myOrders/${user?.email}`)
+        fetch(`https://still-thicket-39969.herokuapp.com/myOrders/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [user?.email])
@@ -14,7 +14,7 @@ const MyOrders = () => {
 
     const handleDelete = (id) => {
         // console.log(id)
-        fetch(`http://localhost:4000/myOrders/${user?.email}/${id}`, {
+        fetch(`https://still-thicket-39969.herokuapp.com/myOrders/${user?.email}/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'

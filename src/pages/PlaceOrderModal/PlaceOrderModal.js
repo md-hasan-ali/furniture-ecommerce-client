@@ -33,7 +33,7 @@ const PlaceOrderModal = () => {
         productInfo.status = "pending"
         productInfo.email = user.email
         productInfo.quantity = { count }
-        fetch('http://localhost:4000/orders', {
+        fetch('https://still-thicket-39969.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 "content-type": "application/json",
