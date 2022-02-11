@@ -7,6 +7,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const [loadding, setisLoadding] = useState(true);
+    const [admin, setIsAdmin] = useState('');
     const provider = new GoogleAuthProvider();
     const auth = getAuth();
 
@@ -17,15 +18,15 @@ const useFirebase = () => {
             .then((userCredential) => {
                 const newUser = { email, displayName: name, photoURL: photo }
                 setUser(newUser);
+                savedUser(newUser?.displayName, newUser?.email, 'POST');
                 // send to the firebase 
                 updateProfile(auth.currentUser, {
                     displayName: name,
                     photoURL: photo,
                 }).then((user) => {
-                    console.log(user?.displayName)
+
                 }).catch((error) => {
                 });
-
                 navigate('/')
             })
             .catch((error) => {
@@ -54,7 +55,7 @@ const useFirebase = () => {
         signInWithPopup(auth, provider)
             .then((result) => {
                 setError('')
-                console.log(result.user)
+                savedUser(result.user?.displayName, result.user?.email, 'PUT');
             }).catch((error) => {
                 setError(error.message);
             })
@@ -73,6 +74,14 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [auth])
 
+    useEffect(() => {
+        fetch(`http://localhost:4000/users/${user?.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setIsAdmin(data?.admin)
+            })
+    }, [user?.email]);
+
     // logout system
     const logout = () => {
         setisLoadding(true);
@@ -83,9 +92,27 @@ const useFirebase = () => {
         })
             .finally(() => setisLoadding(false));
     }
-
+    // save to database 
+    const savedUser = (displayName, email, method) => {
+        const user = { displayName, email };
+        fetch('http://localhost:4000/users', {
+            method: method,
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data?.upsertedId) {
+                    alert('user has created successfully..!')
+                } else {
+                    alert('user already created...!')
+                }
+            });
+    }
     return {
-        user, registerUser, logout, error, loginUser, googleSign, loadding
+        user, registerUser, logout, error, loginUser, googleSign, loadding, admin
     }
 }
 

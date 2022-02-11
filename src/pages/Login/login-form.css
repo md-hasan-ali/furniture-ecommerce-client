@@ -1,4 +1,6 @@
-
+.login-area {
+    padding: 100px 0;
+}
 .login-form {
     box-shadow: 3px 3px 10px gray;
     padding: 40px;

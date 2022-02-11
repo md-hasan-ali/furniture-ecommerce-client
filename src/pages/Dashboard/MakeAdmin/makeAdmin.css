@@ -1,0 +1,16 @@
+.make-admin {
+    padding-top: 60px;
+}
+.make-admin input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.make-admin button {
+    border: 1px solid #95CD41;
+    padding: 10px 20px;
+    background: #95CD41;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+}

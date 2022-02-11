@@ -9,6 +9,9 @@
     font-size: 20px;
     font-weight: 600;
 }
+.navbar {
+    padding: 12px !important;
+}
 /* a.login.nav-link {
     background: #BB2D3B;
     border-radius: 12px;

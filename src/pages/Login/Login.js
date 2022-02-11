@@ -30,7 +30,7 @@ const Login = () => {
         <div>
             <Navigarion></Navigarion>
 
-            <div className="login-area my-5">
+            <div className="login-area">
                 <div className="container">
                     <div className="row align-items-center">
                         <div className="col-md-5">
