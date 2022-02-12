@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navigarion from '../Sheard/Navigation/Navigarion';
 import './login-form.css'
-import loginImage from '../../images/login-image.jpg';
+import loginImage from '../../images/login-image.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../contexts/AuthProvider/useAuth';
 import { Spinner } from 'react-bootstrap';

@@ -1,7 +1,7 @@
 // Import Necessary fiel 
 import React, { useState } from 'react';
 import Navigarion from '../Sheard/Navigation/Navigarion';
-import loginImage from '../../images/login-image.jpg'
+import loginImage from '../../images/login-image.png'
 import './registration.css'
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../contexts/AuthProvider/useAuth';
@@ -35,7 +35,7 @@ const Registration = () => {
             <div className="registration-component mb-5">
                 <div className="container">
                     <div className="row align-items-center">
-                        <div className="col-md-5">
+                        <div className="col-md-6">
                             {!loadding && <div className="registration">
                                 <h2 className='text-danger mb-4'>Please Register.</h2>
                                 <form onSubmit={handleSubmit}>
@@ -83,7 +83,7 @@ const Registration = () => {
                                 </div>
                             }
                         </div>
-                        <div className="col-md-7">
+                        <div className="col-md-6">
                             <div className="login-image">
                                 <img className='w-100' src={loginImage} alt="" />
                             </div>

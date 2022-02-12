@@ -57,7 +57,7 @@ const useFirebase = () => {
                 setError('')
                 savedUser(result.user?.displayName, result.user?.email, 'PUT');
             }).catch((error) => {
-                setError(error.message);
+                window.alert(error.message);
             })
             .finally(() => setisLoadding(false));
     }

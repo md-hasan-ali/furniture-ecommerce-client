@@ -7,10 +7,10 @@ import './navigation.css';
 
 // Navigation Function component 
 const Navigarion = () => {
-    const { user, logout } = useAuth();
+    const { user, logout, admin } = useAuth();
     return (
         <div>
-            <Navbar fixed="top" className='' bg="dark" variant="dark">
+            <Navbar fixed="top" className='' variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/"><span className='text-style'>Furniture</span> STOR</Navbar.Brand>
                     <Nav className="se-auto">
@@ -18,7 +18,12 @@ const Navigarion = () => {
                         <Nav.Link as={Link} to="/about">About Us</Nav.Link>
                         <Nav.Link as={Link} to="/allProducts">All Products</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
-                        <Nav.Link as={Link} className='dashboard me-2' to="/dashboard/manageOrders"> <i class="fas fa-dumpster"></i> Dashboard</Nav.Link>
+                        {
+                            admin ?
+                                <Nav.Link as={Link} className='dashboard me-2' to="/dashboard/manageOrders"> <i class="fas fa-dumpster"></i> Dashboard</Nav.Link>
+                                :
+                                <Nav.Link as={Link} className='dashboard me-2' to="/dashboard/myOrders"> <i class="fas fa-dumpster"></i> Dashboard</Nav.Link>
+                        }
                         {
                             user?.email ?
                                 <>
