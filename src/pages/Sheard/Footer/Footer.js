@@ -1,9 +1,10 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../contexts/AuthProvider/useAuth';
 import './Footer.css'
 
 const Footer = () => {
+    const { user } = useAuth();
     return (
         <div className='footer-area'>
             <div className="container">
@@ -31,8 +32,17 @@ const Footer = () => {
                             <li><Link to="/"><i className="fab fa-git-square"></i></Link></li>
                             <li><Link to="/"><i className="fab fa-twitter-square"></i></Link></li>
                         </div>
+                        {
+                            user?.email ?
+                                <Link to='/allProducts'>
+                                    <button className='btn btn-primary text-white d-inline-block'><i class="fas fa-sign-in-alt"></i> LogIn</button>
+                                </Link>
+                                :
+                                <Link to='/login'>
+                                    <button className='btn btn-primary text-white d-inline-block'><i class="fas fa-sign-in-alt"></i> LogIn</button>
+                                </Link>
+                        }
 
-                        <Nav.Link className='btn btn-primary text-white d-inline-block' as={Link} to="/login"><i class="fas fa-sign-in-alt"></i> LogIn</Nav.Link>
                     </div>
                 </div>
             </div>

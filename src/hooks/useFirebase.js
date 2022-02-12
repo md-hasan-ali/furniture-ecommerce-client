@@ -33,7 +33,6 @@ const useFirebase = () => {
                 setError(error.message);
             })
             .finally(() => setisLoadding(false));
-
     }
     // login user
     const loginUser = (email, password, navigate, location) => {
@@ -57,7 +56,7 @@ const useFirebase = () => {
                 setError('')
                 savedUser(result.user?.displayName, result.user?.email, 'PUT');
             }).catch((error) => {
-                window.alert(error.message);
+                alert(error.message);
             })
             .finally(() => setisLoadding(false));
     }
@@ -73,7 +72,7 @@ const useFirebase = () => {
         });
         return () => unsubscribe;
     }, [auth])
-
+    // check admin 
     useEffect(() => {
         fetch(`https://still-thicket-39969.herokuapp.com/users/${user?.email}`)
             .then(res => res.json())
@@ -81,7 +80,6 @@ const useFirebase = () => {
                 setIsAdmin(data?.admin)
             })
     }, [user?.email]);
-
     // logout system
     const logout = () => {
         setisLoadding(true);
@@ -92,7 +90,7 @@ const useFirebase = () => {
         })
             .finally(() => setisLoadding(false));
     }
-    // save to database 
+    // save to database website user
     const savedUser = (displayName, email, method) => {
         const user = { displayName, email };
         fetch('https://still-thicket-39969.herokuapp.com/users', {
@@ -115,5 +113,4 @@ const useFirebase = () => {
         user, registerUser, logout, error, loginUser, googleSign, loadding, admin
     }
 }
-
 export default useFirebase;
